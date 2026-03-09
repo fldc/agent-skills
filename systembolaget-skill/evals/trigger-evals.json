@@ -1,0 +1,78 @@
+[
+  {
+    "query": "I'm making moules frites on Friday and want a crisp white wine from Italy at Systembolaget, maybe around 130-180 kr and not too boozy. Can you suggest a few bottles that would work with seafood?",
+    "should_trigger": true
+  },
+  {
+    "query": "Find me some Swedish IPAs at Systembolaget under 40 SEK and rank the best ones if I like bitter, dry beers rather than hazy sweet stuff.",
+    "should_trigger": true
+  },
+  {
+    "query": "I have artikelnummer 12345 from a screenshot my friend sent me. What is it, what does it cost, and who would probably enjoy it?",
+    "should_trigger": true
+  },
+  {
+    "query": "Can you build a whisky tasting lineup from Systembolaget with 5 bottles from different countries and a range from budget to premium so the tasting feels varied?",
+    "should_trigger": true
+  },
+  {
+    "query": "I'm hosting tacos for 8 people. Recommend a few bottles from Systembolaget that would fit spicy food, preferably red or rose, and keep each bottle under 160 kr.",
+    "should_trigger": true
+  },
+  {
+    "query": "Show me the Systembolaget stores in Uppsala and tell me which one seems closest to the central station. I just need the best guess and the addresses.",
+    "should_trigger": true
+  },
+  {
+    "query": "What are the sweetest dessert-style wines I can get from Systembolaget for under 200 kronor? Please rank them rather than just listing random bottles.",
+    "should_trigger": true
+  },
+  {
+    "query": "Compare three Swedish craft beers from Systembolaget and tell me which gives the best value if you factor in both price per liter and flavor intensity.",
+    "should_trigger": true
+  },
+  {
+    "query": "Need a gift bottle from Systembolaget around 500-700 SEK, maybe whisky or rum. Give me 3 solid options and say why each one is a good gift.",
+    "should_trigger": true
+  },
+  {
+    "query": "We're planning a dinner party and need sparkling wine from Systembolaget in the 100-150 kr range plus one nicer bottle around 250. What would you pick?",
+    "should_trigger": true
+  },
+  {
+    "query": "I need a cocktail recipe using gin, elderflower, cucumber, and lemon. Keep it simple and summery.",
+    "should_trigger": false
+  },
+  {
+    "query": "What's the difference between chianti and brunello? I'm trying to learn more about Italian wine styles before I buy anything.",
+    "should_trigger": false
+  },
+  {
+    "query": "Can you make me a grocery shopping list for a seafood dinner for 6 people, including side dishes and dessert?",
+    "should_trigger": false
+  },
+  {
+    "query": "Find the nearest liquor store to Stockholm Central that's open right now and give walking directions.",
+    "should_trigger": false
+  },
+  {
+    "query": "I have a CSV of wine ratings from last night's tasting. Can you sort it by score and make a quick summary table?",
+    "should_trigger": false
+  },
+  {
+    "query": "Help me pair drinks for sushi, but don't look anything up - I mostly want general principles, not specific bottles.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a short invitation text for a whisky tasting evening. I want it to sound warm and a little fancy.",
+    "should_trigger": false
+  },
+  {
+    "query": "Explain how alcohol tax works in Sweden and why imported wine can still be cheaper than expected.",
+    "should_trigger": false
+  },
+  {
+    "query": "Can you compare these two gin brands in general terms? I don't need Systembolaget data, just the usual flavor profile differences people talk about.",
+    "should_trigger": false
+  }
+]
