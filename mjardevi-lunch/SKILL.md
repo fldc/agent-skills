@@ -1,6 +1,6 @@
 ---
 name: mjardevi-lunch
-description: Hämta dagens lunchmeny från alla restauranger i Mjärdevi, Linköping. Använd när användaren frågar efter lunch, lunchmeny, mat, restauranger i Mjärdevi eller vad som serveras idag. Triggers inkluderar "vad finns för lunch", "dagens lunch mjärdevi", "lunchmeny", "var kan man äta lunch".
+description: Hämta dagens lunchmenyer från restauranger i Mjärdevi via Luncha I Mjärdevi API. Använd när användaren frågar efter dagens lunch, lunchmeny eller vad som serveras idag i Mjärdevi.
 ---
 
 # Mjärdevi Lunch
@@ -32,8 +32,8 @@ Registrera en gratis API-nyckel på: https://lunchaimjardevi.com/api/
 python scripts/get_lunch.py [api_key] [format]
 ```
 
-**Parametrar (alla valfria):**
-- `api_key`: API-nyckel (om inte angiven läses från `.api_key` fil)
+**Parametrar:**
+- `api_key`: API-nyckel. Om den inte anges maste den finnas i `.api_key` filen.
 - `format`: "text" (standard) eller "json"
 
 **Exempel:**
@@ -56,6 +56,7 @@ python scripts/get_lunch.py ee57b6b96d25120dd4e921a8e7c246f1 json
    - Restaurang stängd
    - Meny ej upplagd än
    - Nätverksproblem
+   - Saknad API-nyckel
 
 ## Output Format
 

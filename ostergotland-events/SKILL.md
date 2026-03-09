@@ -1,6 +1,6 @@
 ---
 name: ostergotland-events
-description: Hitta och sammanfatta evenemang, konserter, marknader och aktiviteter i Östergötland (Linköping, Norrköping, Mjölby, Motala, etc.). Använd när användaren frågar efter saker att göra, helgaktiviteter, "vad händer i [stad]", eller tips på evenemang i regionen.
+description: Hitta och sammanfatta tidsatta evenemang i Östergötland, som konserter, marknader, föreställningar och familjeaktiviteter. Använd när användaren frågar vad som händer i en stad eller under en viss dag eller helg i Linköping, Norrköping, Mjölby, Motala, Vadstena eller andra orter i regionen.
 ---
 
 # Evenemang i Östergötland

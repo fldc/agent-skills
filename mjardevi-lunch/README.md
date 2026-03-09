@@ -21,7 +21,7 @@ Fråga din AI-assistent om lunch i Mjärdevi så triggas skillen automatiskt, t.
    git clone https://github.com/fldc/mjardevi-lunch ~/.claude/skill/mjardevi-lunch
    ```
 
-2. Skaffa en API-nyckel på https://lunchaimjardevi.com/api/
+2. Skaffa en API-nyckel på https://lunchaimjardevi.com/api/ (krävs för att scriptet ska fungera)
 
 3. Skapa `.api_key` i skill-katalogen:
    ```bash

@@ -17,7 +17,7 @@ Använd dessa URL:er för att söka efter evenemang i regionen.
 - **Linköping Konsert & Kongress**: https://www.konsertkongress.se/evenemang/
 - **Louis De Geer (Norrköping)**: https://louisdegeer.se/evenemang/
 - **Saab Arena**: https://saabarena.com/evenemang/ (OBS: Exkludera hockeymatcher, behåll konserter, mässor och allmänhetens åkning)
-- **Saga Bio Mjölby**: https://www.filmstaden.se/mjolby/biograf/saga/ `[CURL]
+- **Saga Bio Mjölby**: https://www.filmstaden.se/mjolby/biograf/saga/ `[CURL]`
 - **Flygvapenmuseum**: https://flygvapenmuseum.se/kalender/
 
 ## Tech & Kunskap

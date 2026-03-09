@@ -1,6 +1,6 @@
 ---
 name: systembolaget-skill
-description: Help users choose, compare, and recommend drinks from Systembolaget and locate Systembolaget stores. Use this whenever the user asks what to buy from Systembolaget, asks for beer, ol, wine, vin, whisky, whiskey, spirits, sprit, bubbel, dessert wine, artikelnummer lookups, food pairings, tasting lineups, budget bottle suggestions, gift bottles, best value comparisons, sweet or bitter style preferences, or store searches. Also use it when the user only describes a meal, party, budget, flavor preference, city, or nearby Systembolaget and is clearly asking for specific bottles or stores, even if they never mention Systembolaget explicitly.
+description: Help users choose, compare, and look up alcoholic products and store locations specifically within Systembolaget's catalog. Use this when the user is clearly shopping at Systembolaget or asks about artikelnummer, Systembolaget stores, budget filtering, pairings, tasting lineups, gift bottles, or best-value picks from Systembolaget's selection.
 compatibility: Uses the bundled `scripts/systembolaget_api.py` helper to call Systembolaget's public API directly. Do not use generic web search or browse the public site when the direct API can answer the question. Only fall back if the API helper fails or the API clearly lacks the needed data.
 ---
 
@@ -35,19 +35,19 @@ Primary commands:
 
 ```bash
 # Search products with filters
-python systembolaget-skill/scripts/systembolaget_api.py search-products --query "ipa" --country "Sverige" --max-price 40 --limit 10
+python scripts/systembolaget_api.py search-products --query "ipa" --country "Sverige" --max-price 40 --limit 10
 
 # Search and sort by price (cheapest first)
-python systembolaget-skill/scripts/systembolaget_api.py search-products --category "Öl" --sort-by price --limit 10
+python scripts/systembolaget_api.py search-products --category "Öl" --sort-by price --limit 10
 
 # Search and sort by APK (alcohol per krona - best value)
-python systembolaget-skill/scripts/systembolaget_api.py search-products --category "Öl" --sort-by apk --limit 10
+python scripts/systembolaget_api.py search-products --category "Öl" --sort-by apk --limit 10
 
 # Lookup by artikelnummer
-python systembolaget-skill/scripts/systembolaget_api.py get-product 12345
+python scripts/systembolaget_api.py get-product 12345
 
 # Search stores
-python systembolaget-skill/scripts/systembolaget_api.py search-stores --city "Uppsala"
+python scripts/systembolaget_api.py search-stores --city "Uppsala"
 ```
 
 The script extracts and caches the public API key automatically.

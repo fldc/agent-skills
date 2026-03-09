@@ -1,6 +1,6 @@
 ---
 name: smhi-weather
-description: Hämta väderinformation från SMHI för svenska platser. Använd när användaren frågar om väder, temperatur, nederbörd, vindförhållanden eller vädervarningar för platser i Sverige. Triggers inkluderar "hur är vädret", "vad blir det för väder", "kommer det regna", "temperatur i", "väderprognos", "vädervarningar" eller frågor om specifika platser som Mjölby, Linköping, Norrköping, Motala, Vadstena eller andra svenska städer.
+description: Hämta väderprognoser från SMHI för de inbyggda orterna Mjölby, Linköping, Norrköping, Motala och Vadstena, samt vädervarningar för Östergötland. Använd när användaren frågar om väder, temperatur, nederbörd, vind eller prognos för någon av dessa orter, eller om vädervarningar i Östergötland.
 ---
 
 # SMHI Weather
@@ -62,7 +62,7 @@ forecast = client.get_forecast("mjölby")
 - motala
 - vadstena
 
-Om användaren anger en annan plats, informera om tillgängliga alternativ.
+Om användaren anger en annan plats, informera om att skillen bara har inbyggt stöd för orterna ovan och föreslå närmaste alternativ.
 
 ### 2. Avgör Typ av Väderinformation
 

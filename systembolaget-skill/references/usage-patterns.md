@@ -7,9 +7,9 @@ Use this reference when the request is a little fuzzy and you need a practical w
 Use the bundled helper first.
 
 ```bash
-python systembolaget-skill/scripts/systembolaget_api.py search-products --query "ipa" --country "Sverige" --max-price 40 --limit 10
-python systembolaget-skill/scripts/systembolaget_api.py get-product 12345
-python systembolaget-skill/scripts/systembolaget_api.py search-stores --city "Stockholm"
+python scripts/systembolaget_api.py search-products --query "ipa" --country "Sverige" --max-price 40 --limit 10
+python scripts/systembolaget_api.py get-product 12345
+python scripts/systembolaget_api.py search-stores --city "Stockholm"
 ```
 
 Treat the script output as the grounded source of truth when it succeeds.

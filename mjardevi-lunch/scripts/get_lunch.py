@@ -11,7 +11,6 @@ from datetime import datetime
 from pathlib import Path
 
 API_BASE = "https://lunchaimjardevi.com/api/v4"
-API_KEY = "demo"
 
 
 def load_api_key():
@@ -40,10 +39,10 @@ def load_api_key():
         except Exception as e:
             print(f"Warning: Could not read {api_key_file_root}: {e}", file=sys.stderr)
 
-    return API_KEY
+    return None
 
 
-def get_restaurants(api_key=API_KEY):
+def get_restaurants(api_key):
     """Hämtar lista över alla restauranger."""
     url = f"{API_BASE}/getRestaurants?key={api_key}"
     try:
@@ -62,7 +61,7 @@ def get_restaurants(api_key=API_KEY):
         return []
 
 
-def get_menu(restaurant_id, api_key=API_KEY):
+def get_menu(restaurant_id, api_key):
     """Hämtar meny för en specifik restaurang."""
     url = f"{API_BASE}/getMenu?id={restaurant_id}&key={api_key}"
     try:
@@ -133,12 +132,20 @@ def format_lunch_menu(restaurants_with_menus, format_type="text"):
 
 def main():
     """Huvudfunktion som hämtar och visar dagens lunch."""
+    format_type = "text"
+
     if len(sys.argv) > 1:
         api_key = sys.argv[1]
         format_type = sys.argv[2] if len(sys.argv) > 2 else "text"
     else:
         api_key = load_api_key()
-        format_type = "text"
+
+    if not api_key:
+        print(
+            "Error: API key required. Pass it as the first argument or create .api_key in the skill root.",
+            file=sys.stderr,
+        )
+        sys.exit(1)
 
     restaurants = get_restaurants(api_key)
 

@@ -1,6 +1,6 @@
 ---
 name: loopia-dns
-description: Manage DNS records in Loopia via XML-RPC API. Use when the user asks to list, add, update, or remove DNS records in Loopia zones/domains, or mentions Loopia DNS, Loopia API, subdomains, A/CNAME/TXT/MX records, or record_id operations.
+description: Manage Loopia DNS via XML-RPC API, including listing account domains and subdomains as well as listing, adding, updating, and removing DNS records in Loopia zones. Use this when the user mentions Loopia DNS, Loopia API, subdomains, domains, or A/CNAME/TXT/MX record changes.
 ---
 
 # Loopia DNS
