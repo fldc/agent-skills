@@ -1,6 +1,6 @@
 # Agent Skills
 
-Ett repository för agent-specifika färdigheter och verktyg.
+Ett repository för agent-specifika färdigheter och verktyg för personlig användning.
 
 ## Skills
 
