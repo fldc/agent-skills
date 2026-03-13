@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "organization": "EHH",
+  "date": "March 2026",
+  "abstract": "Decision-oriented shopping skill for AI agents that uses Systembolaget's public catalog data to search products, compare bottles, recommend pairings, evaluate value metrics such as APK, and find stores by city. Includes guardrails that keep agents on the direct API path first, parameter-extraction patterns, comparison workflows, uncertainty handling, and concise response conventions for alcohol recommendations.",
+  "references": [
+    "https://www.systembolaget.se/",
+    "https://www.systembolaget.se/sortiment/",
+    "https://www.systembolaget.se/butiker-ombud/"
+  ]
+}

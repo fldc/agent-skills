@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "organization": "EHH",
+  "date": "March 2026",
+  "abstract": "Practical lunch-lookup skill for AI agents that fetches and formats the current day's menus from restaurants in Mjardevi, Linkoping. Includes trigger guidance, API-key setup, a Python helper workflow, output formatting expectations, and error-handling rules for missing menus, closed venues, parser issues, and network failures.",
+  "references": [
+    "https://lunchaimjardevi.com/api/",
+    "https://lunchaimjardevi.com/api/v4/",
+    "https://www.brodernaskok.se/meny"
+  ]
+}

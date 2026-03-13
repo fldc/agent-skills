@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "organization": "EHH",
+  "date": "March 2026",
+  "abstract": "Regional event-discovery skill for AI agents covering Linkoping, Norrkoping, Mjolby, Motala, Vadstena, and nearby parts of Ostergotland. Provides a source-selection workflow, handling guidance for difficult sites, event categorization rules, and filtering heuristics that prioritize public cultural and family activities while excluding competitive sports unless explicitly requested.",
+  "references": [
+    "https://visitlinkoping.se/evenemang",
+    "https://visit.norrkoping.se/se-och-gora/evenemangskalender",
+    "https://www.visitmjolby.se/evenemang/",
+    "https://motalasjostad.se/evenemang/kalender/",
+    "https://vadstena.sverige.events/",
+    "https://flygvapenmuseum.se/kalender/",
+    "https://www.goto10.se/event/?event_type=linkoping"
+  ]
+}
