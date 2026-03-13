@@ -47,6 +47,22 @@ def load_api_key():
     return None
 
 
+def parse_args(argv):
+    """Parsar argument och accepterar endast valfritt output-format."""
+    if not argv:
+        return load_api_key(), "text"
+
+    if len(argv) == 1 and argv[0] in {"text", "json"}:
+        return load_api_key(), argv[0]
+
+    print(
+        "Usage: python scripts/get_lunch.py [text|json]\n"
+        "Set API key via MJARDEVI_LUNCH_API_KEY or ~/.config/ehh-skills/config.env.",
+        file=sys.stderr,
+    )
+    sys.exit(2)
+
+
 def get_restaurants(api_key):
     """Hämtar lista över alla restauranger."""
     url = f"{API_BASE}/getRestaurants?key={api_key}"
@@ -137,17 +153,11 @@ def format_lunch_menu(restaurants_with_menus, format_type="text"):
 
 def main():
     """Huvudfunktion som hämtar och visar dagens lunch."""
-    format_type = "text"
-
-    if len(sys.argv) > 1:
-        api_key = sys.argv[1]
-        format_type = sys.argv[2] if len(sys.argv) > 2 else "text"
-    else:
-        api_key = load_api_key()
+    api_key, format_type = parse_args(sys.argv[1:])
 
     if not api_key:
         print(
-            "Error: API key required. Pass it as the first argument or set MJARDEVI_LUNCH_API_KEY in ~/.config/ehh-skills/config.env.",
+            "Error: API key required. Set MJARDEVI_LUNCH_API_KEY or configure ~/.config/ehh-skills/config.env.",
             file=sys.stderr,
         )
         sys.exit(1)
