@@ -11,17 +11,16 @@ Hämtar och visar dagens lunchmeny från alla restauranger i Mjärdevi genom Lun
 
 ### 1. Konfigurera API-nyckel
 
-Skapa en `.api_key` fil i skill-rotkatalogen med din API-nyckel:
+Lägg till din API-nyckel i `~/.config/ehh-skills/config.env`:
 
 ```bash
-echo "din_api_nyckel_här" > .api_key
+mkdir -p ~/.config/ehh-skills
+cat >> ~/.config/ehh-skills/config.env <<'EOF'
+MJARDEVI_LUNCH_API_KEY="din_api_nyckel_här"
+EOF
 ```
 
-Alternativt kopiera exempel-filen:
-```bash
-cp .api_key.example .api_key
-# Redigera sedan .api_key med din faktiska nyckel
-```
+Scriptet läser också `LUNCHA_I_MJARDEVI_API_KEY` eller `API_KEY` i samma fil om du föredrar andra namn.
 
 **Skaffa API-nyckel:**
 Registrera en gratis API-nyckel på: https://lunchaimjardevi.com/api/
@@ -33,12 +32,12 @@ python scripts/get_lunch.py [api_key] [format]
 ```
 
 **Parametrar:**
-- `api_key`: API-nyckel. Om den inte anges maste den finnas i `.api_key` filen.
+- `api_key`: API-nyckel. Om den inte anges måste den finnas i `~/.config/ehh-skills/config.env`.
 - `format`: "text" (standard) eller "json"
 
 **Exempel:**
 ```bash
-# Använd API-nyckel från .api_key fil
+# Använd API-nyckel från ~/.config/ehh-skills/config.env
 python scripts/get_lunch.py
 
 # Ange API-nyckel direkt

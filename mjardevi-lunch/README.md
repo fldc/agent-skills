@@ -23,9 +23,12 @@ Fråga din AI-assistent om lunch i Mjärdevi så triggas skillen automatiskt, t.
 
 2. Skaffa en API-nyckel på https://lunchaimjardevi.com/api/ (krävs för att scriptet ska fungera)
 
-3. Skapa `.api_key` i skill-katalogen:
+3. Lägg till nyckeln i `~/.config/ehh-skills/config.env`:
    ```bash
-   echo "din_api_nyckel" > .api_key
+   mkdir -p ~/.config/ehh-skills
+   cat >> ~/.config/ehh-skills/config.env <<'EOF'
+   MJARDEVI_LUNCH_API_KEY="din_api_nyckel"
+   EOF
    ```
 
 ## Hur det fungerar
@@ -37,5 +40,4 @@ När du frågar om lunch i Mjärdevi identifierar AI-assistenten att skillen ska
 - `SKILL.md` - Skill-definition med triggers och instruktioner
 - `scripts/get_lunch.py` - Script som hämtar menyer via API:et
 - `references/api.md` - API-dokumentation
-- `.api_key.example` - Mall för API-nyckel
-- `.gitignore` - Exkluderar `.api_key` från versionshantering
+- `~/.config/ehh-skills/config.env` - Delad lokal konfigurationsfil för skill-miljövariabler

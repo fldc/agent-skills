@@ -50,7 +50,7 @@ python scripts/systembolaget_api.py get-product 12345
 python scripts/systembolaget_api.py search-stores --city "Uppsala"
 ```
 
-The script extracts and caches the public API key automatically.
+The script extracts and caches the public API key automatically. If needed, you can override it with `SYSTEMBOLAGET_API_KEY` in `~/.config/ehh-skills/config.env`.
 
 ## APK (Alcohol Per Krona)
 

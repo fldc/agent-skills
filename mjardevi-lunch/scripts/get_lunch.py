@@ -5,39 +5,44 @@ Hämtar dagens lunchmeny från alla restauranger i Mjärdevi.
 
 import sys
 import json
+import os
 import urllib.request
 import urllib.error
 from datetime import datetime
 from pathlib import Path
 
 API_BASE = "https://lunchaimjardevi.com/api/v4"
+CONFIG_DIR = Path.home() / ".config" / "ehh-skills"
+CONFIG_FILE = CONFIG_DIR / "config.env"
+
+
+def load_env_file(env_path):
+    """Load simple KEY=VALUE pairs from an env file into the process."""
+    if not env_path.exists():
+        return
+
+    for raw_line in env_path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        key = key.strip()
+        value = value.strip().strip('"').strip("'")
+        if key:
+            os.environ.setdefault(key, value)
 
 
 def load_api_key():
-    """Laddar API-nyckel från .api_key fil om den finns."""
-    script_dir = Path(__file__).parent
-    api_key_file = script_dir / ".api_key"
+    """Laddar API-nyckel från ~/.config/ehh-skills/config.env."""
+    try:
+        load_env_file(CONFIG_FILE)
+    except OSError as exc:
+        print(f"Warning: Could not read {CONFIG_FILE}: {exc}", file=sys.stderr)
 
-    skill_root = script_dir.parent
-    api_key_file_root = skill_root / ".api_key"
-
-    if api_key_file.exists():
-        try:
-            with open(api_key_file, "r") as f:
-                key = f.read().strip()
-                if key:
-                    return key
-        except Exception as e:
-            print(f"Warning: Could not read {api_key_file}: {e}", file=sys.stderr)
-
-    if api_key_file_root.exists():
-        try:
-            with open(api_key_file_root, "r") as f:
-                key = f.read().strip()
-                if key:
-                    return key
-        except Exception as e:
-            print(f"Warning: Could not read {api_key_file_root}: {e}", file=sys.stderr)
+    for env_name in ["MJARDEVI_LUNCH_API_KEY", "LUNCHA_I_MJARDEVI_API_KEY", "API_KEY"]:
+        value = os.environ.get(env_name)
+        if value:
+            return value.strip()
 
     return None
 
@@ -142,7 +147,7 @@ def main():
 
     if not api_key:
         print(
-            "Error: API key required. Pass it as the first argument or create .api_key in the skill root.",
+            "Error: API key required. Pass it as the first argument or set MJARDEVI_LUNCH_API_KEY in ~/.config/ehh-skills/config.env.",
             file=sys.stderr,
         )
         sys.exit(1)

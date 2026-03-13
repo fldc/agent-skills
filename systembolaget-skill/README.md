@@ -31,6 +31,8 @@ python scripts/systembolaget_api.py get-product 12345
 python scripts/systembolaget_api.py search-stores --city "Uppsala"
 ```
 
+If you need to override the detected public API key, place `SYSTEMBOLAGET_API_KEY=...` in `~/.config/ehh-skills/config.env`.
+
 ### APK (Alcohol Per Krona)
 
 APK is calculated as: `(alcohol% × volume_ml) / price`
