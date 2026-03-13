@@ -1,0 +1,13 @@
+{
+  "version": "1.1.0",
+  "organization": "EHH",
+  "date": "March 2026",
+  "abstract": "OpenWrt router-configuration skill for AI agents that manages UCI-based settings over SSH, including DDNS, firewall rules, port forwarding, network interfaces, VLANs, DHCP and DNS entries, wireless configuration, packages, and system settings. Provides read-before-write workflows, commit and restart patterns, verification steps, and practical references for the bundled configuration categories.",
+  "references": [
+    "https://openwrt.org/docs/guide-user/base-system/uci",
+    "https://openwrt.org/docs/guide-user/base-system/network_configuration",
+    "https://openwrt.org/docs/guide-user/firewall/firewall_configuration",
+    "https://openwrt.org/docs/guide-user/network/wifi/basic",
+    "https://openwrt.org/docs/guide-user/base-system/software/opkg"
+  ]
+}
