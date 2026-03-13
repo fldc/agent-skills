@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "organization": "EHH",
+  "date": "March 2026",
+  "abstract": "Weather-forecast and warning skill for AI agents built around SMHI's open APIs for Swedish locations, with special focus on Ostergotland. Covers current conditions, short summaries, multi-day forecasts, active warnings, supported locations, response formatting, and implementation details for the bundled Python client and CLI helpers.",
+  "references": [
+    "https://www.smhi.se/",
+    "https://www.smhi.se/data",
+    "https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/{lon}/lat/{lat}/data.json",
+    "https://wpt-a.smhi.se/backend-warnings-page/warningAreas"
+  ]
+}
