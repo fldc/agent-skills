@@ -1,6 +1,4 @@
 # API Keys and Secrets
-.api_key
-*.api_key
 .env
 .env.local
 .env.*.local

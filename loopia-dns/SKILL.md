@@ -11,20 +11,23 @@ Use this skill to manage Loopia DNS through the XML-RPC API endpoint `https://ap
 
 ### 1) Configure credentials
 
-Create `~/.config/opencode/skill/loopia-dns/.env`:
+Add credentials to `~/.config/ehh-skills/config.env`:
 
 ```bash
-LOOPIA_User="<your-loopia-user>"
-LOOPIA_Password="<your-loopia-password>"
+mkdir -p ~/.config/ehh-skills
+cat >> ~/.config/ehh-skills/config.env <<'EOF'
+LOOPIA_USER="<your-loopia-user>"
+LOOPIA_PASSWORD="<your-loopia-password>"
 # Optional
 # LOOPIA_CUSTOMER="customer-id"
+EOF
 ```
 
 The CLI auto-loads this file. Environment variables also work:
 
 ```bash
-export LOOPIA_User="<your-loopia-user>"
-export LOOPIA_Password="<your-loopia-password>"
+export LOOPIA_USER="<your-loopia-user>"
+export LOOPIA_PASSWORD="<your-loopia-password>"
 ```
 
 Optional (if your API user manages another account):
@@ -80,6 +83,7 @@ python ~/.config/opencode/skill/loopia-dns/scripts/loopia_dns_cli.py delete-reco
 - TTL is in seconds.
 - Loopia propagation can take minutes (sometimes up to around 15 minutes).
 - Required Loopia API permissions are documented in `references/loopia_api.md`.
+- Preferred config location: `~/.config/ehh-skills/config.env`.
 
 ## Files
 

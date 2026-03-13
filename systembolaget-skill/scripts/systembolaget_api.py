@@ -23,10 +23,27 @@ API_BASE = "https://api-extern.systembolaget.se/sb-api-ecommerce/v1"
 WEBSITE = "https://www.systembolaget.se"
 TIMEOUT = 30
 CACHE_TTL_SECONDS = 3600
+CONFIG_DIR = Path.home() / ".config" / "ehh-skills"
+CONFIG_FILE = CONFIG_DIR / "config.env"
 
 
 class APIError(Exception):
     pass
+
+
+def load_env_file(env_path: Path) -> None:
+    if not env_path.exists():
+        return
+
+    for raw_line in env_path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        key = key.strip()
+        value = value.strip().strip('"').strip("'")
+        if key:
+            os.environ.setdefault(key, value)
 
 
 def cache_path() -> Path:
@@ -73,6 +90,8 @@ def fetch_json(url: str, headers: dict[str, str] | None = None) -> dict[str, Any
 
 
 def extract_api_key() -> str:
+    load_env_file(CONFIG_FILE)
+
     env_key = os.environ.get("SYSTEMBOLAGET_API_KEY")
     if env_key:
         return env_key

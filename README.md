@@ -10,3 +10,18 @@ Ett repository för agent-specifika färdigheter och verktyg för personlig anv�
 - **ostergotland-events** - Hitta evenemang, konserter, marknader och aktiviteter i Östergötland
 - **smhi-weather** - Hämta väderinformation från SMHI för svenska platser
 - **systembolaget-skill** - Systembolaget-integration
+
+## Shared Config
+
+Skills that need credentials or overrides read them from `~/.config/ehh-skills/config.env`.
+
+```bash
+mkdir -p ~/.config/ehh-skills
+cat >> ~/.config/ehh-skills/config.env <<'EOF'
+MJARDEVI_LUNCH_API_KEY="..."
+LOOPIA_USER="..."
+LOOPIA_PASSWORD="..."
+LOOPIA_CUSTOMER="..."
+SYSTEMBOLAGET_API_KEY="..."
+EOF
+```

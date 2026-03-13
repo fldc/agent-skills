@@ -9,6 +9,8 @@ import xmlrpc.client
 
 
 API_URL = "https://api.loopia.se/RPCSERV"
+CONFIG_DIR = Path.home() / ".config" / "ehh-skills"
+CONFIG_FILE = CONFIG_DIR / "config.env"
 
 
 def env_first(*keys):
@@ -131,8 +133,7 @@ def main():
     args = parser.parse_args()
 
     try:
-        skill_dir = Path(__file__).resolve().parent.parent
-        load_dotenv(skill_dir / ".env")
+        load_dotenv(CONFIG_FILE)
         username, password, customer = get_auth()
         client = LoopiaClient(username, password, customer)
         zone = normalize_zone(args.zone) if hasattr(args, "zone") else None
