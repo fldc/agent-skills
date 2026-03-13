@@ -25,13 +25,3 @@ LOOPIA_CUSTOMER="..."
 SYSTEMBOLAGET_API_KEY="..."
 EOF
 ```
-
-## Validation
-
-Validate that every skill has a `metadata.json` file with the expected schema:
-
-```bash
-python scripts/validate_skill_metadata.py
-```
-
-This also runs automatically in GitHub Actions on pushes and pull requests.
