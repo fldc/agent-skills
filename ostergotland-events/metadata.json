@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "organization": "EHH",
   "date": "March 2026",
   "abstract": "Regional event-discovery skill for AI agents covering Linkoping, Norrkoping, Mjolby, Motala, Vadstena, and nearby parts of Ostergotland. Provides a source-selection workflow, handling guidance for difficult sites, event categorization rules, and filtering heuristics that prioritize public cultural and family activities while excluding competitive sports unless explicitly requested.",
