@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "organization": "EHH",
   "date": "March 2026",
   "abstract": "Loopia DNS automation skill for AI agents that manages domains, subdomains, and zone records through Loopia's XML-RPC API. Includes credential setup, a bundled Python CLI workflow for listing and changing records, practical guidance for A, CNAME, TXT, and MX operations, and verification rules that re-read DNS state after each mutation.",
