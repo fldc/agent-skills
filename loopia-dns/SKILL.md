@@ -38,27 +38,29 @@ export LOOPIA_CUSTOMER="customer-id"
 
 ### 2) Use the bundled CLI helper
 
+Run the helper from the skill directory:
+
 ```bash
 # List domains on the account
-python ~/.config/opencode/skill/loopia-dns/scripts/loopia_dns_cli.py list-domains
+python scripts/loopia_dns_cli.py list-domains
 
 # List subdomains in a zone
-python ~/.config/opencode/skill/loopia-dns/scripts/loopia_dns_cli.py list-subdomains example.com
+python scripts/loopia_dns_cli.py list-subdomains example.com
 
 # List records on a subdomain (use @ for zone apex)
-python ~/.config/opencode/skill/loopia-dns/scripts/loopia_dns_cli.py list-records example.com --subdomain www
+python scripts/loopia_dns_cli.py list-records example.com --subdomain www
 
 # List all A records in a zone
-python ~/.config/opencode/skill/loopia-dns/scripts/loopia_dns_cli.py list-a-records example.com
+python scripts/loopia_dns_cli.py list-a-records example.com
 
 # Add a DNS record
-python ~/.config/opencode/skill/loopia-dns/scripts/loopia_dns_cli.py add-record example.com www A 203.0.113.10 --ttl 300
+python scripts/loopia_dns_cli.py add-record example.com www A 203.0.113.10 --ttl 300
 
 # Update a record by record_id
-python ~/.config/opencode/skill/loopia-dns/scripts/loopia_dns_cli.py update-record example.com www 123456 A 203.0.113.20 --ttl 300
+python scripts/loopia_dns_cli.py update-record example.com www 123456 A 203.0.113.20 --ttl 300
 
 # Delete a record by record_id
-python ~/.config/opencode/skill/loopia-dns/scripts/loopia_dns_cli.py delete-record example.com www 123456
+python scripts/loopia_dns_cli.py delete-record example.com www 123456
 ```
 
 ## Workflow
