@@ -74,8 +74,6 @@ def record_payload(record_type, rdata, ttl, priority):
         "ttl": int(ttl),
         "rdata": rdata,
     }
-    if priority is not None:
-        payload["priority"] = int(priority)
     return payload
 
 
